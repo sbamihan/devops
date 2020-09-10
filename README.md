@@ -1,6 +1,6 @@
 ## Steps to manually deploy an application
 
-For this demo we are going to manually containerize a typical [Spring Boot](https://spring.io/projects/spring-boot) application and deploy it in an environment. It is important that we understand how it works manually so it becomes for us to automate the entire operation.
+For this demo we are going to manually containerize a typical [Spring Boot](https://spring.io/projects/spring-boot) application and deploy it in an environment. It is important that we understand how it works manually so it becomes easy for us to automate the entire operation.
 
 First, build the artifact using Maven. While building, the unit tests and integration tests are automatically executed. If one of the tests fails, the build will not proceed.
 

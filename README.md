@@ -1,16 +1,12 @@
-## Steps to deploy an application
+## Steps to manually deploy an application
 
-These steps show how to containerize a typical [Spring Boot](https://spring.io/projects/spring-boot) application and deploy it in an environment.
+For this demo we are going to manually containerize a typical [Spring Boot](https://spring.io/projects/spring-boot) application and deploy it in an environment. It is important that we understand how it works manually so it becomes for us to automate the entire operation.
 
-First, if you are using Maven you need to build it
+First, build the artifact using Maven. While building, the unit tests and integration tests are automatically executed. If one of the tests fails, the build will not proceed.
 
 ```bash
 mvn clean package
 ```
-
-While building, the unit tests and integration tests are automatically executed. If one of the tests fails, the build will not proceed.
-
-
 
 Next, build a docker image
 
@@ -18,19 +14,16 @@ Next, build a docker image
 docker build -t aboitiz/demo-service .
 ```
 
-
 Then, push the image to image registry
 
 ```bash
 docker push aboitiz/demo-service .
 ```
 
-
 Finally, run the image
 ```bash
 docker run -it -d --name demo-service aboitiz/demo-service
 ```
-
 
 Optionally, you can view the logs
 ```bash

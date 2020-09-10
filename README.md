@@ -11,11 +11,13 @@ mvn clean package
 While building, the unit tests and integration tests are automatically executed. If one of the tests fails, the build will not proceed.
 
 
+
 Next, build a docker image using
 
 ```bash
 docker build -t aboitiz/demo-service .
 ```
+
 
 Then, push the image to image registry
 
@@ -23,10 +25,12 @@ Then, push the image to image registry
 docker push aboitiz/demo-service .
 ```
 
+
 Finally, run the image using
 ```bash
 docker run -it -d --name demo-service aboitiz/demo-service
 ```
+
 
 Optionally, you can view the logs by executing
 ```bash

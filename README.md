@@ -8,24 +8,24 @@ First, build the artifact using Maven. While building, the unit tests and integr
 mvn clean package
 ```
 
-Next, build a docker image
+Next, build a docker image.
 
 ```bash
 docker build -t aboitiz/demo-service .
 ```
 
-Then, push the image to image registry
+Then, push the image to image registry.
 
 ```bash
 docker push aboitiz/demo-service .
 ```
 
-Finally, run the image
+Finally, run the image.
 ```bash
 docker run -it -d --name demo-service aboitiz/demo-service
 ```
 
-Optionally, you can view the logs
+Optionally, you can view the logs.
 ```bash
 docker logs demo-service
 ```

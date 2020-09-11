@@ -2,7 +2,7 @@ node {
     def app
 
     stage('Clone Repository') {
-	  checkout scm
+	    checkout scm
     }
 	
     stage('Build Artifact') {
@@ -35,7 +35,7 @@ node {
       dir('employee-service') {
         sh 'echo updating employee-service'
         sh 'docker service update --force --update-parallelism 1 --update-delay 10s employee-service'
-        sh 'echo employee-service is now running at http://172.18.13.12'
+        sh 'echo employee-service is now running at http://172.18.13.12:6523'
       }		
     }
 }

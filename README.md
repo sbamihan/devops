@@ -19,21 +19,21 @@ mvn clean package
 Next, build a docker image.
 
 ```bash
-docker build -t aboitiz/demo-service .
+docker build -t aboitiz/employee-service .
 ```
 
 Then, push the image to image registry.
 
 ```bash
-docker push aboitiz/demo-service .
+docker push aboitiz/employee-service .
 ```
 
 Finally, run the image.
 ```bash
-docker run -it -d --name demo-service aboitiz/demo-service
+docker run -it -d --name employee-service aboitiz/employee-service
 ```
 
 Optionally, you can view the logs.
 ```bash
-docker logs demo-service
+docker logs employee-service
 ```

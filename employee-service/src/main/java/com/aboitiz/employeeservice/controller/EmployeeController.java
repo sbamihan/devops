@@ -28,10 +28,5 @@ public class EmployeeController {
 	public String hi() {
 		return service.greetHi();
 	}
-
-	@GetMapping("/test")
-	public String test() {
-		return "Test";
-	}
 	
 }

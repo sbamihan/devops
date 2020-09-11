@@ -11,18 +11,19 @@ git clone https://github.com/sbamihan/devops.git
 Next, build the artifact using Maven. While building, the unit tests and integration tests are automatically executed. If one of the tests fails, the build will not proceed.
 
 ```bash
-mvn clean package
+cd devops/employee-service
+sudo mvn clean package
 ```
 
 Then, build a docker image.
 
 ```bash
-docker build -t sherwinamihan/employee-service:latest .
+docker build -t aboitiz/employee-service:latest .
 ```
 
 Finally, create a service to run it.
 ```bash
-docker service create --publish 6523:6523 --name employee-service sherwinamihan/employee-service:latest
+docker service create --publish 6523:6523 --name employee-service aboitiz/employee-service:latest
 ```
 
 Optionally, you can view the logs.

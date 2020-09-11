@@ -5,7 +5,7 @@ For this demo we are going to manually containerize a typical [Spring Boot](http
 First, let's start by cloning our repo.
 
 ```bash
-git clone https://github.com/sbamihan/devops.git
+sudo git clone https://github.com/sbamihan/devops.git
 ```
 
 Next, build the artifact using Maven. While building, the unit tests and integration tests are automatically executed. If one of the tests fails, the build will not proceed.
@@ -26,7 +26,19 @@ Finally, create a service to run it.
 docker service create --publish 6523:6523 --name employee-service aboitiz/employee-service:latest
 ```
 
-Optionally, you can view the logs.
+Optionally, you can 
+
+View the logs.
 ```bash
-docker logs employee-service
+docker service logs employee-service
+```
+
+View running containers.
+```bash
+docker service ps employee-service
+```
+
+Scale the service.
+```bash
+docker service scale employee-service=3
 ```

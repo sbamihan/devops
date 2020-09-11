@@ -17,12 +17,12 @@ mvn clean package
 Then, build a docker image.
 
 ```bash
-docker build -t aboitiz/employee-service .
+docker build -t sherwinamihan/employee-service:latest .
 ```
 
-Finally, run the image.
+Finally, create a service to run it.
 ```bash
-docker run -it -d --name employee-service aboitiz/employee-service
+docker service create --publish 6523:6523 --name employee-service sherwinamihan/employee-service:latest
 ```
 
 Optionally, you can view the logs.

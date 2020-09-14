@@ -33,7 +33,7 @@ public class EmployeeServiceApplicationUnitTests {
 		this.mockMvc.perform(get("/helloWorld"))
 			.andDo(print())
 			.andExpect(status().isOk())
-			.andExpect(content().string(containsString("Hello Worlds!")));
+			.andExpect(content().string(containsString("Hello World!")));
 	}
 	
 	@Test

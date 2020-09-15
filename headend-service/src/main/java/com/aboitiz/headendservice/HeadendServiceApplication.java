@@ -25,7 +25,7 @@ class MainController {
 
 	@GetMapping("switch")
 	public ResponseEntity<?> swicthMeter(@RequestParam("serialNumber") String serialNumber,
-			@RequestParam("action") String action) {
+			@RequestParam("act") String act) {
 		MeterControl meterControl = new MeterControl();
 		meterControl.setSerialNumber(serialNumber);
 		meterControl.setStatus("SUCCESS");

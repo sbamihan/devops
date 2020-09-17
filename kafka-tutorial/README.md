@@ -2,6 +2,11 @@
 
 Since we already have a `Kafka Cluster` running at 172.18.13.12, we'll just connect to that server and play around with it using the following commands.
 
+First, cd to Kafka directory
+```bash
+cd C:\workspace\kafka-tutorial\kafka_2.12-2.3.0
+```
+
 List Topics
 ```bash
 bin\windows\kafka-topics.bat --list --zookeeper 172.18.13.12:12181,172.18.13.12:22181,172.18.13.12:32181
